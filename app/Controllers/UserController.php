@@ -47,7 +47,6 @@ class UserController {
             "success" => true,
             "user" => $data,
         ];
-        var_dump($result);
         $response->getBody()->write(json_encode($result));
         return $response->withHeader("Content-Type", "application/json");
     }
