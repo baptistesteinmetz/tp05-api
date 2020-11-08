@@ -56,7 +56,6 @@ class UserController {
             'country' => $data['country'],
             'phone' => $data['phone'],
         ];
-        $userData = json_encode($data);
         $result = [
             "success" => true,
             "user" => $userData,
