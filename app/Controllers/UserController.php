@@ -43,6 +43,19 @@ class UserController {
 
     public function register(Request $request, Response $response, array $args) {
         $data = $request->getParsedBody();
+        $userData = [
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'adress' => $data['adress'],
+            'zipcode' => $data['zipcode'],
+            'city' => $data['city'],
+            'gender' => $data['gender'],
+            'mail' => $data['mail'],
+            'password' => $data['password'],
+            'login' => $data['login'],
+            'country' => $data['country'],
+            'phone' => $data['phone'],
+        ];
         $userData = json_encode($data);
         $result = [
             "success" => true,
