@@ -43,9 +43,10 @@ class UserController {
 
     public function register(Request $request, Response $response, array $args) {
         $data = $request->getParsedBody();
+        $userData = json_encode($data);
         $result = [
             "success" => true,
-            "user" => $data,
+            "user" => $userData,
         ];
         $response->getBody()->write(json_encode($result));
         return $response->withHeader("Content-Type", "application/json");
