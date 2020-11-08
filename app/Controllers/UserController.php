@@ -56,11 +56,8 @@ class UserController {
             'country' => $data['country'],
             'phone' => $data['phone'],
         ];
-        $result = [
-            "success" => true,
-            "user" => $userData,
-        ];
-        $response->getBody()->write(json_encode($result));
+
+        $response->getBody()->write(json_encode($userData));
         return $response->withHeader("Content-Type", "application/json");
     }
 }
